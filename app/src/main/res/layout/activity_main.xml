@@ -1,50 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".MainActivity"
-    tools:ignore="Orientation">
+    tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/mealImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="mealImage"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
 
     <EditText
         android:id="@+id/InputTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter time of day (e.g., Morning, Afternoon)"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="93dp" />
+        android:hint="@string/InputString"
+        android:inputType="text"
+        android:textColorHint="#546E7A"
+        android:padding="12dp"
+        tools:ignore="Autofill" />
 
     <Button
         android:id="@+id/btnSuggest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Get suggestion"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="154dp" />
+        android:layout_marginTop="10dp"
+        android:paddingVertical="12dp"
+        android:text="Suggest meal" />
 
     <TextView
         android:id="@+id/txtSuggestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="16dp"
         android:text=""
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="561dp" />
+        android:gravity="center"
+        tools:ignore="VisualLintBounds" />
 
     <Button
-        android:id="@+id/BtnReset"
+        android:id="@+id/btnReset"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Reset"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="618dp" />
+        android:layout_marginTop="10dp"
+        android:paddingVertical="12dp"
+        android:text="Reset" />
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
